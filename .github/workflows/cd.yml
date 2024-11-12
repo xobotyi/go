@@ -41,6 +41,8 @@ jobs:
 
       - name: "Install go-vanity-ssg"
         run: go install xobotyi.github.io/go/go-vanity-ssg@latest
+      - name: "Prepare build output"
+        run: sudo mkdir -m 777 ./dist
       - name: "Build"
         run: go-vanity-ssg --public
 
